@@ -1,0 +1,88 @@
+# Implemented Policies
+
+## Fit for 55
+A comprehensive energy policy package proposed by the European Commission aimed at reducing greenhouse gas emissions by at least 55% by 2030 compared to 1990 levels, through measures such as expanding renewable energy, implementing carbon pricing, and promoting energy efficiency across various sectors.
+- 1990 equivalent CO2 emission of the energy sector in Italy = 124 Mt CO2
+- The CO2 cap implemented to the model for 2030 = 55.8 Mt CO2 (45% of the 1990 value)
+- Projected demand increase = 19.6%
+
+## Carbon Neutrality (Paris Agreement)
+An international treaty designed to combat climate change by aiming for carbon neutrality by 2050, achieved through voluntary emissions reduction commitments from participating countries and promoting global cooperation on climate action.
+- The CO2 cap implemented to the model for 2050 = 0 kg CO2 (Carbon neutrality)
+- Projected demand increase = 83%
+
+## Other Limitations
+Italy maximum potential:
+- PV Farm = 90 GW (for 2030)
+- On-Shore Wind Farm = 60 GW (for 2030)
+- PHS = 10 GW (overall)
+- Geothermal Power Plant = 2 GW (overall)
+- Run-of-River Hydro Power Plant = 8 GW (overall)
+
+# Scenarios
+
+## Base Case (2023)
+
+- Diversity
+- Renewable Energy Growth, Notably solar and wind power
+- Government Support
+- Reducing Carbon Emissions
+- Role of Natural Gas
+- Coal Phase-Out
+- Regional Disparity (In generation & consumption)
+- Intensity of the Energy Mix = 0.18 kgCO2/kWh
+- System Total Levelized Cost of Electricity = 0.127 €/kWh
+
+## Fit for 55 (2030)
+
+- Fading out of fossil fuel power plants
+- Important installations of green power plants
+- Natural Gas dispatching importance
+- System Total Levelized Cost of Electricity = 0.099 €/kWh
+- System CO2 Intensity = 0.015 kgCO2/kWh
+
+## Paris Agreement - Current Technologies (2050)
+
+- Improvements in transmission lines were taken into account.
+- Phasing out of fossil fuel power plants completely
+- Unrealistic installations of green power plants & unrealistic investment cost
+- System Total Levelized Cost of Electricity = 3.971 €/kWh
+- CO2 neutrality
+- No dispatchability
+- Peak demand problems
+
+Solutions:
+- Provide system with dispatchability
+Green Power Plants: Nuclear
+Power Plants & OXC CCS
+- Storage: Hydrogen & Batteries
+
+## Paris Agreement - New Technologies Introduced (2050)
+
+- Green power plants & storage systems are helping meet the peak demand.
+- Much more realistic installations & costs.
+- System Total Levelized Cost of Electricity = 0.14 €/kWh
+- Running the model with only one of each solutions alone, we found out that although none of the solutions are impossible to neglect, the diversity of the solutions helps the feasibility.
+
+### Nuclear Power Plants
+- 3rd Gen fission nuclear reactor: Neglecting possible developments in the technology
+- Companies (like Terrapower) are creating 3rd generation nuclear power plants starting from old coal plants, reducing costs.
+- Nuclear is a divisive topic, but the public opinion is starting to change.
+- Maximum installed capacity of 2 GW for each region (Safety concerns, Public acceptance, Grid stability, Technological constraints)
+
+### OXC CCS
+OXC CCS: a carbon capture technology that involves burning fossil fuels in a mixture of pure oxygen and recycled flue gas, resulting in a concentrated stream of carbon dioxide
+- OXC CCS can be implemented in already existing CCGT plants!
+- CCGT technology can be used to burn Hydrogen instead of natural gas.
+- It is possible, if needed, to add to already existent coal plants a gas turbine, creating new OXC CCS at lower investment costs.
+- It is assumed that all the existing CCGT power plants, are converted to OXC CCS power plants by 2050.
+
+### Hydrogen Storage
+Hydrogen: Electrolyzer/Fuel Cell pair can be considered a storage.
+- Maximum storage capacity of 5 GWh for each region (Technology maturity, Grid integration, Land use, Infrastructure)
+
+### Batteries
+- Using Lithium-ion batteries as a form of storage
+- Long term feasibility of the solution as capacity costs will eventually decrease.
+- 4 hours of energy capacity per storage capacity is assumed.
+- Maximum storage capacity of 10 GWh for each region (Technology maturity, Costs)
