@@ -1,0 +1,409 @@
+
+# Technology Definition #
+
+# Parameters and Units:
+
+    # resource:      limitation over the power output
+    # resource_unit: Defines the unit of numbers provided in resource
+    # energy_eff:    efficiency of power plant             [-]
+    # lifetime:      Life time of the power plant          [year]
+    # energy_cap:    Capital investment of the technology  [$/kW]
+    # om_annual:     Fixed annual O&M cost                 [$/kW]
+    # om_prod:       Variable cost of production           [$/kWh]
+    # om_con:        Variable cost of fuel                 [$/kWh]
+    # energy_cap:    Investment Cost of Technology         [$/kW]
+    # lifetime:      Life time of the Technology           [years]
+    # interest_rate: Interest rate                         [-]
+   
+# Reference: Updated Least Cost Power Development Plan 2017-2035 Report
+
+techs: 
+
+# Supply and Conversion Technologies #
+
+############################### Existing Geothermal ###############################
+    Geo_PP_ex:
+    
+        essentials:
+            color: '#d9c252' #Earth yellow
+            name: 'Existing Geothermal'
+            parent: supply
+            carrier_out: Power                   
+
+        constraints:
+            lifetime: 50   
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 3500 #€/kW
+                om_annual: 170 #€/kW/year                    
+                om_prod: 0.0188 #€/kWh                                   
+                interest_rate: 0.10                      
+
+############################### New Geothermal ###############################
+    Geo_PP_new:
+    
+        essentials:
+            color: '#d9c252' #Earth yellow
+            name: 'New Geothermal'
+            parent: supply
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap 
+            lifetime: 50                                               
+                                     
+        costs:
+            monetary:    
+                energy_cap: 3500 #€/kW
+                om_annual: 170 #€/kW/year                    
+                om_prod: 0.0188 #€/kWh                                   
+                interest_rate: 0.10  
+
+############################### Existing Wind ###############################
+    Wind_PP_ex:
+    
+        essentials:
+            color: '#0c0791' #Dark blue
+            name: 'Existing Wind'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints: 
+            resource_unit: energy_per_cap 
+            lifetime: 20   
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 1350 #€/kW
+                om_annual: 38 #€/kW/year                                   
+                interest_rate: 0.10                    
+
+############################### New Wind (On-Shore) ###############################
+    Wind_on_PP_new:
+    
+        essentials:
+            color: '#0c0791' #Dark blue
+            name: 'New On-shore Wind'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap  
+            lifetime: 20  
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 1350 #€/kW
+                om_annual: 38 #€/kW/year                                   
+                interest_rate: 0.10  
+
+############################### New Wind (Off-Shore) ###############################
+    Wind_off_PP_new:
+    
+        essentials:
+            color: '#0c0791' #Dark blue
+            name: 'New Off-shore Wind'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap 
+            lifetime: 30
+            #energy_cap_max: 100000000 #kW allowed to reach the maximum of 100 GW   
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 3200 #€/kW
+                om_annual: 100 #€/kW/year                                   
+                interest_rate: 0.10  
+
+############################### Existing PV farm ###############################
+    PV_PP_ex:
+    
+        essentials:
+            color: '#e80c1a' #Red
+            name: 'Existing PV farm'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            resource_unit: energy_per_cap  
+            lifetime: 25   
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 900 #€/kW
+                om_annual: 19 #€/kW/year                   
+                interest_rate: 0.10                   
+
+############################### New PV farm ###############################
+    PV_PP_new:
+    
+        essentials:
+            color: '#e80c1a' #Red
+            name: 'New PV farm'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap 
+            lifetime: 25
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 900 #€/kW
+                om_annual: 19 #€/kW/year                   
+                interest_rate: 0.10             
+
+############################### Existing PV rooftop ###############################
+    PV_roof_ex:
+    
+        essentials:
+            color: '#e80c1a' #Red
+            name: 'Existing PV rooftop'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            resource_unit: energy_per_cap  
+            lifetime: 20   
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 1250 #€/kW
+                om_annual: 27 #€/kW/year                           
+                interest_rate: 0.10                   
+
+############################### New PV rooftop ###############################
+    PV_roof_new:
+    
+        essentials:
+            color: '#e80c1a' #Red
+            name: 'New PV rooftop'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap   
+            lifetime: 20  
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 1250 #€/kW
+                om_annual: 27 #€/kW/year                           
+                interest_rate: 0.10                   
+
+############################### Existing Hydro dam ###############################
+    Hydrodam_PP_ex:
+    
+        essentials:
+            color: '#5ec9db' #Light blue
+            name: 'Existing Hydro dam'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            resource_unit: energy_per_cap
+            lifetime: 80   
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 1900 #€/kW
+                om_annual: 55 #€/kW/year                    
+                interest_rate: 0.10                       
+
+############################### Existing Hydro ror ###############################
+    Hydroror_PP_ex:
+    
+        essentials:
+            color: '#5ec9db' #Light blue
+            name: 'Existing Hydro ror'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            resource_unit: energy_per_cap
+            lifetime: 30  
+                                                                    
+        costs:
+            monetary:    
+                energy_cap: 2300 #€/kW
+                om_annual: 100 #€/kW/year                        
+                interest_rate: 0.10                       
+
+############################### New Hydro ror ###############################
+    Hydroror_PP_new:
+    
+        essentials:
+            color: '#5ec9db' #Light blue
+            name: 'New Hydro ror'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 1       
+            resource: inf
+            resource_unit: energy_per_cap 
+            lifetime: 30      
+                                                                      
+        costs:
+            monetary:    
+                energy_cap: 2300 #€/kW
+                om_annual: 100 #€/kW/year                        
+                interest_rate: 0.10                                                                                              
+
+############################### Existing PHS ###############################
+    PHS_PP_ex:
+    
+        essentials:
+            color: '#5ec9db' #Light blue
+            name: 'Existing PHS'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 0.87  
+            resource_eff: 0.635  #Efficiency in capturing resource before it reaches storage 
+            lifetime: 50   
+                                                                                
+        costs:
+            monetary:    
+                energy_cap: 1900 #€/kW
+                om_annual: 48 #€/kW/year                           
+                interest_rate: 0.10                     
+
+############################### New PHS ###############################
+    PHS_PP_new:
+    
+        essentials:
+            color: '#5ec9db' #Light blue
+            name: 'New PHS'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 0.87  
+            resource_eff: 0.635  #Efficiency in capturing resource before it reaches storage 
+            resource: inf
+            resource_unit: energy_per_cap
+            lifetime: 50 
+            energy_cap_max: 2444000 #kW allowed to reach the maximum of 10 GW  
+            storage_cap_max: 219960000 #kWh (90 kWh of storage per 1kW of installed capacity)   
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 1900 #€/kW
+                om_annual: 48 #€/kW/year                           
+                interest_rate: 0.10      
+
+############################### New Nuclear Power Plant ###############################
+    Nuclear_PP_new:
+    
+        essentials:
+            color: '#b34302' #Orange
+            name: 'New Nuclear power Plant'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 0.33   
+            resource: inf
+            resource_unit: energy_per_cap
+            lifetime: 30  
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 4220 #€/kW
+                om_annual: 33.6 #€/kW/year
+                om_con: 0.095 #€/kWh                             
+                interest_rate: 0.10      
+
+############################### New OXC Power Plant with Carbon Capture Technology ###############################
+    OXC_PP_new:
+    
+        essentials:
+            color: '#63341e' #Dark brown
+            name: 'New OXC Power Plant with Carbon Capture Technology'
+            parent: supply_plus
+            carrier_out: Power                   
+
+        constraints:
+            energy_eff: 0.56  
+            resource: inf
+            resource_unit: energy_per_cap
+            lifetime: 20  
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 788 #€/kW
+                om_annual: 10.5 #€/kW/year 
+                om_prod: 0.006844 #€/kWh                   
+                om_con: 0.0291 #€/kWh                                             
+                interest_rate: 0.10      
+
+############################### Electrolyzer/Fuel Cell ###############################
+    PEM_new:
+    
+        essentials:
+            color: '#df66e3' #Pink
+            name: 'New Electrolyzer/Fuel Cell'
+            parent: storage
+            carrier: Power                   
+
+        constraints:
+            energy_eff: 0.3969 #0.63 * 0.63 = 0.3969 Round trip efficiency 
+            storage_loss: 0 #No loss over time assumed
+            lifetime: 25
+            storage_cap_max: 5000000 #kWh   
+                                                                               
+        costs:
+            monetary:    
+                energy_cap: 358 #€/kW
+                om_annual: 80.55 #€/kW/year                           
+                interest_rate: 0.10      
+                
+############################### Battery ###############################
+    Battery_new:
+    
+        essentials:
+            color: '#2f9e5c' #Dark green
+            name: 'New Battery'
+            parent: storage
+            carrier: Power                   
+
+        constraints:
+            energy_eff: 0.7225 #0.85 * 0.85 = 0.7225 Round trip efficiency 
+            energy_cap_per_storage_cap_max: 4 #4 hours
+            storage_loss: 0 #No loss over time assumed
+            lifetime: 25
+            storage_cap_max: 10000000 #kWh
+                                                                               
+        costs:
+            monetary:    
+                storage_cap: 187 #€/kWh
+                om_annual: 23.425 #€/kW/year                           
+                interest_rate: 0.10      
+
+
+# Consuming Technologies #
+
+#################################### Electricity ####################################
+    demand_power:
+    
+        essentials:
+            name: 'Power Demand'
+            color: '#000000' #Black
+            parent: demand
+            carrier: Power
+            

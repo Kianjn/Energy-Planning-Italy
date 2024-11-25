@@ -1,0 +1,81 @@
+
+# Transmission Grid and the connections Definition #
+
+# Parameters and Units:
+
+    # energy_cap_equals:  Capacity of Grid          [kW]
+    # distance:           Distance Between 2 Nodes  [hundreds of km]   
+
+techs:
+
+
+############################### Transmission Line ############################### 
+    Trans:
+        essentials:
+            name: 'Transmission'
+            parent: transmission
+            carrier: Power
+            color: '#00BFFF'
+        constraints:
+            lifetime: 40
+            energy_eff_per_distance: 0.96
+        costs:
+            monetary:
+                om_prod: 0.0022
+                
+                
+links:                             
+                            
+# Connection of Nodes
+# As the country is divided into 4 regions, the distance and capacity between two nodes could be different in different directions
+# due to the fact that there are different counties are located in every region and not all of them are connected
+# As a result, an average capacity and distance is considered for the connection of every two nodes.
+                
+    NORD,CNOR:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_min: 6750000 #kW
+                    energy_cap_max: 15750000 #kW                
+                distance: 2.8 #100 km                                                                 
+                             
+    CNOR,CSUD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_min: 6300000 #kW
+                    energy_cap_max: 14700000 #kW                 
+                distance: 2.75 #100 km                                                                 
+
+    CNOR,SARD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 450000 #kW
+                    energy_cap_max: 1050000 #kW                 
+                distance: 5.16 #100 km                                                                 
+                             
+    CSUD,SARD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 1500000 #kW
+                    energy_cap_max: 3500000 #kW                 
+                distance: 4.13 #100 km                                                                 
+
+    CSUD,SUD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 8550000 #kW
+                    energy_cap_max: 19950000 #kW                 
+                distance: 3.65 #100 km                                                                 
+                             
+    SUD,SICI:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 2250000 #kW 
+                    energy_cap_max: 5250000 #kW                 
+                distance: 5.06 #100 km                                                                 
+                                                                       

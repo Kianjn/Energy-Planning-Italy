@@ -1,0 +1,13 @@
+locs,techs,distance
+CNOR,Trans:CSUD,2.75
+CNOR,Trans:NORD,2.8
+CNOR,Trans:SARD,5.16
+CSUD,Trans:CNOR,2.75
+CSUD,Trans:SARD,4.13
+CSUD,Trans:SUD,3.65
+NORD,Trans:CNOR,2.8
+SARD,Trans:CNOR,5.16
+SARD,Trans:CSUD,4.13
+SICI,Trans:SUD,5.06
+SUD,Trans:CSUD,3.65
+SUD,Trans:SICI,5.06

@@ -1,0 +1,7 @@
+locs,techs,force_resource
+CNOR,demand_power,1.0
+CSUD,demand_power,1.0
+NORD,demand_power,1.0
+SARD,demand_power,1.0
+SICI,demand_power,1.0
+SUD,demand_power,1.0

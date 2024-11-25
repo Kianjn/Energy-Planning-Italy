@@ -1,0 +1,6 @@
+group_names_energy_cap_max,group_energy_cap_max
+geo_max,2000000
+hydroror_max,8000000
+phs_max,10000000
+pv_max,200000000
+wind_max,60000000

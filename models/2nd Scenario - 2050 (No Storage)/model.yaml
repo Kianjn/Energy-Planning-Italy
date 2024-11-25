@@ -1,0 +1,106 @@
+
+# Model configuration: all settings that affect the built model
+
+########################################################################
+#                              IMPORTS                                 #
+# All the files that define the model configuration should be imported #
+########################################################################
+
+import: 
+    
+    - 'Model_config/Location_Constraints.yaml'
+    - 'Model_config/Transmission_links.yaml'
+    - 'Model_config/Technologies.yaml'
+    
+########################################################################
+#                                MODEL                                 #
+#                      General settings of the model                   #
+########################################################################
+
+scenarios:
+
+    CO2_cap: ['PHS_max_cap','Geo_max_cap','Hydroror_max_cap','co2_cap']
+    
+
+overrides:
+    co2_cap:
+        group_constraints:
+            systemwide_max_slacked_co2:
+                cost_max:
+                    co2: 0 #kgCO2 
+
+    PV_max_cap:
+        group_constraints:
+            pv_max:
+                techs: ['PV_PP_ex','PV_PP_new']
+                energy_cap_max: 200000000 #kW to reach the maximum of 200 GW 
+
+
+    Wind_max_cap:
+        group_constraints:
+            wind_max:
+                techs: ['Wind_PP_ex','Wind_on_PP_new']
+                energy_cap_max: 60000000 #kW to reach the maximum of 60 GW   
+
+
+    PHS_max_cap:
+        group_constraints:
+            phs_max:
+                techs: ['PHS_PP_ex','PHS_PP_new']
+                energy_cap_max: 10000000 #kW allowed to reach the maximum of 10 GW
+                storage_cap_max: 900000000 #kWh (90 kWh of storage per 1kW of installed capacity)
+
+    Geo_max_cap:
+        group_constraints:
+            geo_max:
+                techs: ['Geo_PP_ex','Geo_PP_new']
+                energy_cap_max: 2000000 #kW allowed to reach the maximum of 2 GW  
+
+    Hydroror_max_cap:
+        group_constraints:
+            hydroror_max:
+                techs: ['Hydroror_PP_ex','Hydroror_PP_new']
+                energy_cap_max: 8000000 #kW allowed to reach the maximum of 8 GW                                                         
+
+
+model:
+
+    name: 'Model Name'                # Defining the name of the model
+    calliope_version: 0.6.10                   # What version of Calliope this model is intended for
+    timeseries_data_path: 'Timeseries'         # Time series data path
+    timeseries_dateformat: '%d/%m/%Y %H:%M:%S' # Time series date format   
+    subset_time: ['2019-01-01', '2019-12-31']  # shows the a subset of time to represent the results
+
+########################################################################
+#                                RUN                                   #
+#          All settings that affect how the built model is run         #
+########################################################################
+
+run:
+
+    mode: plan  # Choices: plan, operate
+
+    operation:
+        horizon: 48
+        window: 24
+                
+        ####################################
+        #        Defining the solver       #
+        #         glpk: free solver        #             
+        ####################################
+        
+    solver: gurobi
+    solver_options:
+        NumericFocus: 0
+    ensure_feasibility: False  # Switches on the "unmet demand" constraint        
+    bigM: 1e6                  # Sets the scale of unmet demand, which cannot be too high,
+                               # otherwise the optimisation will not converge
+    zero_threshold: 1e-20      # Any value coming out of the backend that is smaller than this, will be set to zero        
+    objective_options: {'cost_class': {'monetary': 1, 'co2': 0}, 'sense': minimize}      
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,17 @@
+techs,inheritance
+Geo_PP_ex,supply
+Geo_PP_new,supply
+Hydrodam_PP_ex,supply_plus
+Hydroror_PP_ex,supply_plus
+Hydroror_PP_new,supply_plus
+PHS_PP_ex,supply_plus
+PHS_PP_new,supply_plus
+PV_PP_ex,supply_plus
+PV_PP_new,supply_plus
+PV_roof_ex,supply_plus
+PV_roof_new,supply_plus
+Trans,transmission
+Wind_PP_ex,supply_plus
+Wind_off_PP_new,supply_plus
+Wind_on_PP_new,supply_plus
+demand_power,demand

@@ -1,0 +1,21 @@
+techs,names
+Bio_PP_ex,Existing Bio-Energy
+CCGT_PP_ex,Existing CCGT
+Coal_PP_ex,Existing Coal Power Plants
+Geo_PP_ex,Existing Geothermal
+Hydrodam_PP_ex,Existing Hydro dam
+Hydroror_PP_ex,Existing Hydro ror
+Oil_PP_ex,Existing Oil
+PHS_PP_ex,Existing PHS
+PV_PP_ex,Existing PV farm
+PV_roof_ex,Existing PV rooftop
+Trans,Transmission
+USC_PP_ex,Existing Coal USC Power Plants
+WTE_PP_ex,Existing Waste-to-energy
+Wind_PP_ex,Existing Wind
+Wind_off_PP_1,Potential Wind (1) (Sardinia_NE) (Off-Shore)
+Wind_off_PP_2,Potential Wind (2) (Sardinia_SE) (Off-Shore)
+Wind_off_PP_3,Potential Wind (3) (Vieste) (Off-Shore)
+Wind_off_PP_4,Potential Wind (4) (Mazara del vallo) (Off-Shore)
+Wind_off_PP_5,Potential Wind (5) (Santa Maria di Leuca) (Off-Shore)
+demand_power,Power Demand

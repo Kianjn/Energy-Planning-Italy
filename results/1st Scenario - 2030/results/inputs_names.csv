@@ -1,0 +1,23 @@
+techs,names
+Bio_PP_ex,Existing Bio-Energy
+CCGT_PP_ex,Existing CCGT
+Coal_PP_ex,Existing Coal Power Plants
+Geo_PP_ex,Existing Geothermal
+Geo_PP_new,New Geothermal
+Hydrodam_PP_ex,Existing Hydro dam
+Hydroror_PP_ex,Existing Hydro ror
+Hydroror_PP_new,New Hydro ror
+Oil_PP_ex,Existing Oil
+PHS_PP_ex,Existing PHS
+PHS_PP_new,New PHS
+PV_PP_ex,Existing PV farm
+PV_PP_new,New PV farm
+PV_roof_ex,Existing PV rooftop
+PV_roof_new,New PV rooftop
+Trans,Transmission
+USC_PP_ex,Existing Coal USC Power Plants
+WTE_PP_ex,Existing Waste-to-energy
+Wind_PP_ex,Existing Wind
+Wind_off_PP_new,New Off-shore Wind
+Wind_on_PP_new,New On-shore Wind
+demand_power,Power Demand

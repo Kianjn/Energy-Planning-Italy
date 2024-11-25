@@ -1,0 +1,15 @@
+costs,locs,techs,cost_om_prod
+monetary,CNOR,Geo_PP_ex,0.0188
+monetary,CNOR,Geo_PP_new,0.0188
+monetary,CNOR,Trans:CSUD,0.0022
+monetary,CNOR,Trans:NORD,0.0022
+monetary,CNOR,Trans:SARD,0.0022
+monetary,CSUD,Trans:CNOR,0.0022
+monetary,CSUD,Trans:SARD,0.0022
+monetary,CSUD,Trans:SUD,0.0022
+monetary,NORD,Trans:CNOR,0.0022
+monetary,SARD,Trans:CNOR,0.0022
+monetary,SARD,Trans:CSUD,0.0022
+monetary,SICI,Trans:SUD,0.0022
+monetary,SUD,Trans:CSUD,0.0022
+monetary,SUD,Trans:SICI,0.0022

@@ -1,0 +1,552 @@
+
+# Location Definition #
+
+# Parameters:
+
+    # lat: Latitude of the location
+    # lon: Longtitude of the location 
+    # energy_cap_equals: Real Capacity [kW]
+
+# Defining the locations 
+
+locations:
+
+################################### NORD ##################################                                                   
+    NORD:
+        
+        # Available Technologies
+        techs:
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 28000000 #kW 
+
+            WTE_PP_ex:
+                constraints:
+                    energy_cap_equals: 303000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 2519000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 900000 #kW 
+      
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 199000 #kW
+                    resource: file=Wind.csv:NORD  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 7245000 #kW
+                    resource: file=Solar.csv:NORD  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 6628000 #kW
+                    resource: file=Solar.csv:NORD  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 7362000 #kW
+                    resource: file=Hydrodam.csv:NORD  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 3830000 #kW
+                    resource: file=Hydroror.csv:NORD 
+
+            PHS_PP_ex:
+                constraints:
+                    energy_cap_equals: 5064000 #kW 
+                    storage_cap_max: 479051000 #kWh
+                    resource: file=Hydrodam.csv:NORD
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:NORD 
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW 
+                    resource: file=Wind_off.csv:NORD  
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:NORD
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:NORD
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:NORD
+
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:NORD        
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:NORD 
+                    
+################################### CNOR ##################################                                                 
+    CNOR:
+ 
+        # Available Technologies   
+        techs:
+
+            Coal_PP_ex:
+                constraints:
+                    energy_cap_equals: 150000 #kW 
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 2000000 #kW 
+
+            WTE_PP_ex:
+                constraints:
+                    energy_cap_equals: 23000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 247000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 2160000 #kW 
+
+            Geo_PP_ex:
+                constraints:
+                    energy_cap_equals: 817000 #kW 
+
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 166000 #kW
+                    resource: file=Wind.csv:CNOR  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 1151000 #kW
+                    resource: file=Solar.csv:CNOR  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 1650000 #kW
+                    resource: file=Solar.csv:CNOR  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 790000 #kW
+                    resource: file=Hydrodam.csv:CNOR  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 310000 #kW
+                    resource: file=Hydroror.csv:CNOR 
+
+            Geo_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:CNOR  
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind_off.csv:CNOR   
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:CNOR 
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:CNOR 
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:CNOR
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:CNOR
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:CNOR  
+                    
+################################### CSUD ##################################                                                                                                   
+    CSUD:
+         
+        # Available Technologies              
+        techs:
+
+            USC_PP_ex:
+                constraints:
+                    energy_cap_equals: 1845000 #kW 
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 8800000 #kW 
+
+            WTE_PP_ex:
+                constraints:
+                    energy_cap_equals: 128000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 437000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 900000 #kW 
+
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 2316000 #kW
+                    resource: file=Wind.csv:CSUD  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 1172000 #kW
+                    resource: file=Solar.csv:CSUD  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 2400000 #kW
+                    resource: file=Solar.csv:CSUD  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 563000 #kW
+                    resource: file=Hydrodam.csv:CSUD  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 490000 #kW
+                    resource: file=Hydroror.csv:CSUD 
+
+            PHS_PP_ex:
+                constraints:
+                    energy_cap_equals: 1681000 #kW 
+                    storage_cap_max: 155741000 #kWh
+                    resource: file=Hydrodam.csv:CSUD 
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:CSUD 
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind_off.csv:CSUD   
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:CSUD 
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:CSUD 
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:CSUD
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:CSUD 
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:CSUD 
+                    
+################################### SUD ##################################                                                                                                                                                      
+    SUD:
+ 
+
+        # Available Technologies              
+        techs:
+
+            Coal_PP_ex:
+                constraints:
+                    energy_cap_equals: 3060000 #kW 
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 8800000 #kW 
+
+            WTE_PP_ex:
+                constraints:
+                    energy_cap_equals: 33000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 659000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 2618000 #kW 
+
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 6053000 #kW
+                    resource: file=Wind.csv:SUD  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 1110000 #kW
+                    resource: file=Solar.csv:SUD  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 3156000 #kW
+                    resource: file=Solar.csv:SUD  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 687000 #kW
+                    resource: file=Hydrodam.csv:SUD  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 260000 #kW
+                    resource: file=Hydroror.csv:SUD 
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:SUD
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind_off.csv:SUD  
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SUD
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SUD
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:SUD
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:SUD
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:SUD 
+
+################################### SICI ##################################                                                                                                                                                      
+    SICI:
+ 
+
+        # Available Technologies              
+       techs:
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 4000000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 74000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 1410000 #kW 
+
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 2126000 #kW
+                    resource: file=Wind.csv:SICI  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 631000 #kW
+                    resource: file=Solar.csv:SICI  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 1126000 #kW
+                    resource: file=Solar.csv:SICI  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 16000 #kW
+                    resource: file=Hydrodam.csv:SICI  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 130000 #kW
+                    resource: file=Hydroror.csv:SICI 
+
+            PHS_PP_ex:
+                constraints:
+                    energy_cap_equals: 574000 #kW 
+                    storage_cap_max: 53135000 #kWh
+                    resource: file=Hydrodam.csv:SICI
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:SICI
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind_off.csv:SICI  
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SICI 
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SICI 
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:SICI
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:SICI
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:SICI  
+
+################################### SARD ##################################                                                                                                                                                      
+    SARD:
+ 
+
+        # Available Technologies              
+        techs:
+
+            Coal_PP_ex:
+                constraints:
+                    energy_cap_equals: 1072000 #kW 
+
+            CCGT_PP_ex:
+                constraints:
+                    energy_cap_equals: 2400000 #kW 
+
+            WTE_PP_ex:
+                constraints:
+                    energy_cap_equals: 4000 #kW 
+
+            Bio_PP_ex:
+                constraints:
+                    energy_cap_equals: 113000 #kW 
+
+            Oil_PP_ex:
+                constraints:
+                    energy_cap_equals: 1200000 #kW 
+
+            Wind_PP_ex:
+                constraints:
+                    energy_cap_equals: 1095000 #kW
+                    resource: file=Wind.csv:SARD  
+
+            PV_PP_ex:
+                constraints:
+                    energy_cap_equals: 407000 #kW
+                    resource: file=Solar.csv:SARD  
+
+            PV_roof_ex:
+                constraints:
+                    energy_cap_equals: 734000 #kW
+                    resource: file=Solar.csv:SARD  
+
+            Hydrodam_PP_ex:
+                constraints:
+                    energy_cap_equals: 184000 #kW
+                    resource: file=Hydrodam.csv:SARD  
+
+            Hydroror_PP_ex:
+                constraints:
+                    energy_cap_equals: 40000 #kW
+                    resource: file=Hydroror.csv:SARD 
+
+            PHS_PP_ex:
+                constraints:
+                    energy_cap_equals: 237000 #kW 
+                    storage_cap_max: 21943000 #kWh
+                    resource: file=Hydrodam.csv:SARD
+
+            Wind_on_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind.csv:SARD
+
+            Wind_off_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Wind_off.csv:SARD  
+
+            PV_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SARD
+
+            PV_roof_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Solar.csv:SARD
+
+            Hydroror_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    resource: file=Hydroror.csv:SARD
+
+            PHS_PP_new:
+                constraints:
+                    energy_cap_min: 0 #kW
+                    storage_cap_min: 0 #kWh
+                    resource: file=Hydrodam.csv:SARD
+
+            demand_power:
+                constraints:
+                    resource: file=Demand.csv:SARD 

@@ -1,0 +1,77 @@
+
+
+################### TRANSMISSION LINKS  #####################
+
+#from Motta's Thesis
+  
+# energy_cap_equals: Installed transmission capacity [kW]
+# energy_eff_per_distance: Energy efficiency per distance [1/(10s km)]
+# distance: Length of transmission line [10s km]
+
+techs:
+
+
+############################### Transmission Line ############################### 
+    Trans:
+        essentials:
+            name: 'Transmission'
+            parent: transmission
+            carrier: Power
+            color: '#00BFFF'
+        constraints:
+            lifetime: 40
+            energy_eff_per_distance: 0.96
+        costs:
+            monetary:
+                om_prod: 0.0022
+                
+                
+links:                             
+                            
+# Connection of Nodes
+# As the country is divided into 4 regions, the distance and capacity between two nodes could be different in different directions
+# due to the fact that there are different counties are located in every region and not all of them are connected
+# As a result, an average capacity and distance is considered for the connection of every two nodes.
+                
+    NORD,CNOR:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 4500000 #kW                
+                distance: 2.8 #100 km                                                                 
+                             
+    CNOR,CSUD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 4200000 #kW                  
+                distance: 2.75 #100 km                                                                 
+
+    CNOR,SARD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 300000 #kW                  
+                distance: 5.16 #100 km                                                                 
+                             
+    CSUD,SARD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 1000000 #kW                  
+                distance: 4.13 #100 km                                                                 
+
+    CSUD,SUD:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 5700000 #kW                  
+                distance: 3.65 #100 km                                                                 
+                             
+    SUD,SICI:
+        techs:
+            Trans:
+                constraints: 
+                    energy_cap_equals: 1500000 #kW                  
+                distance: 5.06 #100 km                                                                 
+                                                     

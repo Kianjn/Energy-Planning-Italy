@@ -1,0 +1,13 @@
+locs,techs,lookup_remotes
+CNOR,Trans:CSUD,CSUD::Trans:CNOR
+CNOR,Trans:NORD,NORD::Trans:CNOR
+CNOR,Trans:SARD,SARD::Trans:CNOR
+CSUD,Trans:CNOR,CNOR::Trans:CSUD
+CSUD,Trans:SARD,SARD::Trans:CSUD
+CSUD,Trans:SUD,SUD::Trans:CSUD
+NORD,Trans:CNOR,CNOR::Trans:NORD
+SARD,Trans:CNOR,CNOR::Trans:SARD
+SARD,Trans:CSUD,CSUD::Trans:SARD
+SICI,Trans:SUD,SUD::Trans:SICI
+SUD,Trans:CSUD,CSUD::Trans:SUD
+SUD,Trans:SICI,SICI::Trans:SUD

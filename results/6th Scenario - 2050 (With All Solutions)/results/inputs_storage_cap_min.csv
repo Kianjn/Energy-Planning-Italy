@@ -1,0 +1,13 @@
+locs,techs,storage_cap_min
+CNOR,Battery_new,0.0
+CNOR,PHS_PP_new,0.0
+CSUD,Battery_new,0.0
+CSUD,PHS_PP_new,0.0
+NORD,Battery_new,0.0
+NORD,PHS_PP_new,0.0
+SARD,Battery_new,0.0
+SARD,PHS_PP_new,0.0
+SICI,Battery_new,0.0
+SICI,PHS_PP_new,0.0
+SUD,Battery_new,0.0
+SUD,PHS_PP_new,0.0
