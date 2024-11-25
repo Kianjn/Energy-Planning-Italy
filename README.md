@@ -37,8 +37,8 @@ Strategic roadmap for Italy’s power sector using Calliope, Gurobi, and QGIS
 - Optimized solution is just one point in decision space. This single solution is based on a plethora of hypothesis, and many uncertainties are involved. Generating “Near-Optimal Solutions” can help us with that.
 
 ## Other Contributors
-Lorenzo Rossi
-Alessandro Mastena
+- Lorenzo Rossi
+- Alessandro Mastena
 
 ## 📄 References
 - Calliope: https://calliope.readthedocs.io/en/stable/
